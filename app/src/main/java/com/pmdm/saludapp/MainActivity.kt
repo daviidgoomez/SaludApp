@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             if(name.isNotEmpty()) {
                 Snackbar.make(btnHello, "Hola $name!", Snackbar.LENGTH_SHORT)
                     .setAnchorView(btnHello)
-                    .setAction("CLOSE"){ finishAffinity()}
+                    .setAction("Cerrar App"){ finishAffinity()}
                     .show()
             }
         }
