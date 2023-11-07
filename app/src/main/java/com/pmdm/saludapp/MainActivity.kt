@@ -28,15 +28,15 @@ class MainActivity : AppCompatActivity() {
                Snackbar.make(btnHello, "Hola $name!", Snackbar.LENGTH_SHORT)
                    .setAnchorView(etName)
                     //.setAction("Cerrar App") { finishAffinity() }
-                   .setAction("RESET") {etName.setText(null)}
+                   .setAction("Siguinete pantalla") {  val intentGA = Intent(this, GreetingActivity::class.java)
+                       intentGA.putExtra("EXTRA_NAME", name)
+                       startActivity(intentGA)}
                    .show()
            } else {
                Toast.makeText(this, "Introduce un nombre $name!",
                    Toast.LENGTH_LONG).show()
            }
-            val intentGA = Intent(this, GreetingActivity::class.java)
-            intentGA.putExtra("EXTRA_NAME", name)
-            startActivity(intentGA)
+
             }
         }
 
